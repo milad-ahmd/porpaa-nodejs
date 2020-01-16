@@ -1,0 +1,54 @@
+{
+    "apps":
+    [
+        {
+            "name": "api",
+            "script": "index.js",
+            "exec_mode": "cluster_mode",
+            "instances": "2",
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        },
+        {
+            "name": "smsWorker",
+            "script": "./workers/smsWorker.js",
+            "instances": 1,
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        },
+        {
+            "name": "emailWorker",
+            "script": "./workers/emailWorker.js",
+            "instances": 1,
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        },
+        {
+            "name": "notifWorker",
+            "script": "./workers/notifWorker.js",
+            "instances": 1,
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        },
+        {
+            "name": "execWorker",
+            "script": "./workers/execWorker.js",
+            "instances": 1,
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        },
+        {
+            "name": "crawlerWorker",
+            "script": "./workers/crawlerWorker.js",
+            "instances": 1,
+            "env": {
+                "DOMAIN": "https://testapi.chandpar.com"
+            }
+        }
+    ]
+}
